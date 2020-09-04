@@ -1,27 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css"
 import "./global.scss";
-import React, {useState} from "react";
-import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
-import {siteName} from "./config/siteConfig";
+import React from "react";
+import Button from "@material-ui/core/Button";
 
-export const App = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => setIsOpen(!isOpen);
-
+export function App() {
     return (
-        <div>
-            <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">{siteName}</NavbarBrand>
-                <NavbarToggler onClick={toggle}/>
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                        <NavItem>
-                            <NavLink>Status</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-        </div>
+        <Button variant="contained" color="primary">
+            你好，世界
+        </Button>
     )
-};
+}
